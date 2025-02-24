@@ -1,65 +1,72 @@
+/* Container */
 .container {
-    width: 1500px;
+    width: 100%; /* Make it responsive */
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    padding: 20px; /* Prevents content from stretching */
 }
+
+/* Page Content */
 .page-content {
     margin-top: 35px;
-
-     /* Adjust based on header height */
 }
 
+/* Registration Form */
 .register-form {
     background-color: white;
-    padding: 40px;
+    padding: 30px; /* Adjusted padding for consistency */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 370px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ensures responsiveness */
+    max-width: 400px; /* Adjusted max width */
     text-align: center;
-    margin-top:-250px;
-    padding-bottom:12px;
-    padding-top:12px;
-    margin-left:-140px;
-    
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-left: 0; /* Centered */
 }
 
+/* Form Heading */
 .register-form h1 {
     margin-bottom: 20px;
     font-size: 24px;
+    font-weight: bold;
 }
 
+/* Input Group */
 .input-group1 {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
     background-color: white;
     border-radius: 30px;
-    padding: 10px;
-    color:black;
+    padding: 12px;
+    color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Input Icon */
 .input-group1 .icon {
-    margin-right: 10px;
-    font-size: 20px;
+    margin-right: 12px;
+    font-size: 18px;
+    color: #333;
 }
 
+/* Input Field */
 .input-group1 input {
     border: none;
     outline: none;
     flex-grow: 1;
     font-size: 16px;
-    padding: 10px;
-    color:black;
+    padding: 12px;
+    color: black;
     border-radius: 30px;
     background-color: white;
 }
 
+/* Submit Button */
 button {
     width: 100%;
     background-color: black;
@@ -69,20 +76,40 @@ button {
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
 button:hover {
     background-color: #333;
 }
 
+/* Form Footer */
 .register-form p {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 14px;
 }
 
+/* Link Styling */
 .register-form a {
     color: black;
     text-decoration: none;
     font-weight: bold;
 }
 
+/* Responsive Adjustments */
+@media (max-width: 1366px) {
+    .register-form {
+        width: 95%;
+        max-width: 350px; /* Slightly smaller for compact fit */
+    }
+
+    .input-group1 input {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}

@@ -4,39 +4,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3px;
-    padding-bottom: 16px;
+    padding: 10px 20px;
     position: relative;
-    margin: -35px;
-    width:1450px;
-    margin-top:155px;
-    
+    margin-top: 120px;
+    width: 100%; /* Fully responsive */
 }
-.logo h3{
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h3 {
     font-size: 35px;
-    margin-top:5px;
-    position:absolute;
-    left:-29px;
+    margin-top: 5px;
+    position: relative;
 }
 
-.logo img{
-    align-items:left;
+.logo img {
+    width: 80px; /* Adjust logo size */
+    height: auto;
 }
 
-/* Logout button (Power Icon) */
-/* Menu button (Hamburger Icon) */
-/* Logout Button Container */
-/* Logout Icon Container */
+/* Logout Button (Power Icon) */
 .logout-container {
     position: absolute;
-    top: 55px;
-    right: 160px;
+    top: 20px;
+    right: 30px;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
-/* Power-Off Icon */
 .logout-icon {
     font-size: 24px;
     color: white;
@@ -44,10 +45,9 @@
 }
 
 .logout-icon:hover {
-    color:beige; /* Red on hover */
+    color: beige;
 }
 
-/* Dropdown Menu */
 /* Dropdown Menu */
 .dropdown {
     position: relative;
@@ -60,15 +60,15 @@
     color: white;
     cursor: pointer;
     margin-left: 20px;
-    position:absolute;
-    right:-390px;
-    top:-45px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 .dropdown-menu {
     position: absolute;
-    right: -350px;
-    top: -10px;
+    right: 0;
+    top: 40px;
     background: white;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -88,58 +88,46 @@
     background-color: #f1f1f1;
 }
 
-
-
-
-
 /* Different Header Background Colors */
-
-.question1-header { background-color: #4c0b0b; }  /* Default */
-.explore-header { background-color: #4c0b0b; } /* Blue */
-.recipes-header { background-color: #d35400; } /* Orange */
-.login-header { background-color: #E16A54; } /* Purple */
-.register-header { background-color: burlywood;}
-.home-header{background-color: blueviolet;}
-.recipe-header{background-color: #d35400;}
-.exp-header{background-color: skyblue;}
-
+.question1-header { background-color: #4c0b0b; }
+.explore-header { background-color: #4c0b0b; }
+.recipes-header { background-color: #d35400; }
+.login-header { background-color: #E16A54; }
+.register-header { background-color: burlywood; }
+.home-header { background-color: blueviolet; }
+.recipe-header { background-color: #d35400; }
+.exp-header { background-color: skyblue; }
 
 /* Default Navigation */
 .navi {
     display: flex;
-    gap: 35px;
+    gap: 20px;
     justify-content: center;
-    margin-top: -35px;
-    margin-bottom: -10px;
-    padding: 1px 2px;
+    padding: 10px 20px;
     border-radius: 5px;
+    flex-wrap: wrap;
 }
 
 /* Different Navigation Background Colors */
- /* White */
-.question1-nav{background-color: transparent;}
-.explore-nav { background-color: #4c0b0b; } /* Blue */
-.recipes-nav { background-color: #d35400; } /* Orange */
-.login-nav { background-color: #E16A54; } /* Purple */
-.register-nav { background-color: burlywood;}
-.home-nav{ background-color: blueviolet;}
-.recipe-nav{background-color: #d35400;}
-.exp-nav{background-color: skyblue;}
-
-
+.question1-nav { background-color: transparent; }
+.explore-nav { background-color: #4c0b0b; }
+.recipes-nav { background-color: #d35400; }
+.login-nav { background-color: #E16A54; }
+.register-nav { background-color: burlywood; }
+.home-nav { background-color: blueviolet; }
+.recipe-nav { background-color: #d35400; }
+.exp-nav { background-color: skyblue; }
 
 /* Button Styles */
 .navi button {
     border: none;
-    padding: 7px 10px;
+    padding: 7px 15px;
     background-color: white;
     color: #4c0b0b;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 15px;
-
-    /* Ensure transition applies */
+    font-size: 16px;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -148,3 +136,44 @@
     color: #4c0b0b;
 }
 
+/* Responsive Adjustments */
+@media screen and (max-width: 1366px) {
+    .header {
+        margin-top: 100px;
+        padding: 10px;
+    }
+
+    .navi {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .logout-container {
+        top: 15px;
+        right: 20px;
+    }
+
+    .hamburger-icon {
+        right: 15px;
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        margin-top: 90px;
+    }
+
+    .navi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logout-container {
+        right: 15px;
+    }
+
+    .hamburger-icon {
+        right: 10px;
+    }
+}

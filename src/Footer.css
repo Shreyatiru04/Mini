@@ -1,23 +1,23 @@
 .footer {
     text-align: center;
-    height: auto; /* Adjust height dynamically */
-    padding-top:-3px;
-    padding-bottom:-10px;
+    height: auto; /* Adjusts dynamically */
+    padding: 20px 0; /* Ensures proper spacing */
     margin-top: 45px;
-    margin-left:-35px;
     background-color: black;
-    width: 1450px; /* Make it fully responsive */
+    width: 100%; /* Fully responsive */
     color: #fff;
 }
 
+/* Flexbox container for structured layout */
 .flex {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Ensure even spacing */
-    align-items: center; /* Align vertically */
-    padding: 0 50px; /* Adjust padding for proper spacing */
+    flex-wrap: wrap; /* Allows responsiveness */
+    justify-content: space-between; /* Distributes content */
+    align-items: center;
+    padding: 20px 50px;
 }
 
+/* Footer Logo Styling */
 .footer-logo {
     display: flex;
     flex-direction: column;
@@ -27,13 +27,13 @@
 .img-title {
     display: flex;
     align-items: center;
-    gap: 10px; /* Adjust spacing between logo and text */
+    gap: 10px; /* Proper spacing between logo & text */
 }
 
 .footer-logo img {
     width: 80px;
     height: 80px;
-    margin-left: 115px;
+    margin-left: 20px; /* Adjusted for better alignment */
 }
 
 .footer h2 {
@@ -41,30 +41,29 @@
     color: white;
     font-family: 'Berkshire Swash', sans-serif;
     text-align: left;
-    
 }
 
+/* Footer Text */
 .footer-logo p {
     text-align: center;
     font-family: 'Alef', sans-serif;
-    margin-top: -60px;
-    padding-left:50px;
+    margin-top: 10px;
+    padding-left: 10px;
     max-width: 300px;
-    padding-top:60px;
-     /* Limit width to maintain structure */
 }
 
+/* Tag Links */
 .tags {
     display: flex;
-    flex-wrap: wrap; /* Allow multiple lines */
+    flex-wrap: wrap;
     gap: 10px;
     justify-content: flex-end;
-    max-width: 500px; /* Keep within limits */
+    max-width: 500px;
     padding-right: 40px;
-    align-content:center;
-    padding-top:-100px;
+    align-content: center;
 }
 
+/* Food Item Links */
 .food-item a {
     color: rgba(182, 99, 255, 0.9);
     font-size: 14px;
@@ -72,13 +71,56 @@
     text-decoration: none;
 }
 
+/* Footer Links */
 footer a {
     color: #f1c40f;
     text-decoration: none;
     margin: 0 5px;
 }
 
+/* Copyright Text */
 .copyright {
     text-align: center;
-    margin-top: -25px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1366px) {
+    .flex {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    .footer-logo {
+        align-items: center;
+    }
+
+    .footer-logo img {
+        margin-left: 0; /* Centered on smaller screens */
+    }
+
+    .tags {
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 15px 0;
+    }
+
+    .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo p {
+        padding-left: 0;
+    }
+
+    .tags {
+        justify-content: center;
+    }
 }

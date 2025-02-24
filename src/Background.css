@@ -1,14 +1,16 @@
 .background-container {
     position: relative;
     width: 100vw;
-    height: 130vh;
+    height: 100vh; /* Adjusted for better fit */
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Prevents background scrolling issues */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Transparent overlay for blur effect */
 .overlay {
     position: absolute;
     top: 0;
@@ -16,14 +18,46 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: transparent; /* Light color overlay */
-    backdrop-filter: blur(7px); /* Stronger blur effect for clarity */
+    background: rgba(255, 255, 255, 0.2); /* Light overlay for better visibility */
+    backdrop-filter: blur(5px); /* Adjusted blur effect for clarity */
 }
 
+/* Main content inside the container */
 .content {
     position: relative;
     z-index: 2; /* Ensures elements are above the overlay */
     text-align: center;
-    width: 100%;
+    width: 90%; /* Adjusted for better responsiveness */
+    max-width: 1200px; /* Prevents it from being too wide */
     padding: 20px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1366px) {
+    .background-container {
+        height: 100vh; /* Keeps fullscreen view */
+    }
+
+    .overlay {
+        backdrop-filter: blur(4px); /* Slightly less blur for smaller screens */
+    }
+
+    .content {
+        width: 95%; /* Expands slightly for smaller screens */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .background-container {
+        height: 100vh;
+    }
+
+    .overlay {
+        backdrop-filter: blur(3px);
+    }
+
+    .content {
+        width: 98%;
+        padding: 15px;
+    }
 }

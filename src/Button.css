@@ -1,19 +1,55 @@
 .buttons {
-    margin-top:30px;
+    margin-top: 30px;
     display: flex;
-    gap: 100px;
-    margin-left:60px;
-    font-size:20px;
+    justify-content: center; /* Centers the buttons */
+    align-items: center;
+    gap: 50px; /* Reduced for better spacing */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+    font-size: 20px;
+    width: 100%; /* Ensures full width for centering */
 }
 
+/* Button Styling */
 button {
     background-color: #333;
     color: white;
     border: none;
-    padding: 10px 30px;
+    padding: 12px 35px; /* Slightly increased padding for better appearance */
     border-radius: 30px;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #555;
+    transform: scale(1.05); /* Slight growth effect */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1366px) {
+    .buttons {
+        gap: 30px; /* Adjust spacing for smaller screens */
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .buttons {
+        flex-direction: column; /* Stacks buttons vertically */
+        gap: 20px;
+    }
+
+    button {
+        width: 80%; /* Makes buttons larger on small screens */
+        max-width: 300px;
+        font-size: 1em;
+    }
 }
