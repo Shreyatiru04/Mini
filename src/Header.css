@@ -1,0 +1,150 @@
+/* Default Header Style */
+.header {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+    padding-bottom: 16px;
+    position: relative;
+    margin: -35px;
+    width:1450px;
+    margin-top:155px;
+    
+}
+.logo h3{
+    font-size: 35px;
+    margin-top:5px;
+    position:absolute;
+    left:-29px;
+}
+
+.logo img{
+    align-items:left;
+}
+
+/* Logout button (Power Icon) */
+/* Menu button (Hamburger Icon) */
+/* Logout Button Container */
+/* Logout Icon Container */
+.logout-container {
+    position: absolute;
+    top: 55px;
+    right: 160px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Power-Off Icon */
+.logout-icon {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.logout-icon:hover {
+    color:beige; /* Red on hover */
+}
+
+/* Dropdown Menu */
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    position:absolute;
+    right:-390px;
+    top:-45px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: -350px;
+    top: -10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    z-index: 100;
+}
+
+.dropdown-menu p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+}
+
+.dropdown-menu p:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+
+/* Different Header Background Colors */
+
+.question1-header { background-color: #4c0b0b; }  /* Default */
+.explore-header { background-color: #4c0b0b; } /* Blue */
+.recipes-header { background-color: #d35400; } /* Orange */
+.login-header { background-color: #E16A54; } /* Purple */
+.register-header { background-color: burlywood;}
+.home-header{background-color: blueviolet;}
+.recipe-header{background-color: #d35400;}
+.exp-header{background-color: skyblue;}
+
+
+/* Default Navigation */
+.navi {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    margin-top: -35px;
+    margin-bottom: -10px;
+    padding: 1px 2px;
+    border-radius: 5px;
+}
+
+/* Different Navigation Background Colors */
+ /* White */
+.question1-nav{background-color: transparent;}
+.explore-nav { background-color: #4c0b0b; } /* Blue */
+.recipes-nav { background-color: #d35400; } /* Orange */
+.login-nav { background-color: #E16A54; } /* Purple */
+.register-nav { background-color: burlywood;}
+.home-nav{ background-color: blueviolet;}
+.recipe-nav{background-color: #d35400;}
+.exp-nav{background-color: skyblue;}
+
+
+
+/* Button Styles */
+.navi button {
+    border: none;
+    padding: 7px 10px;
+    background-color: white;
+    color: #4c0b0b;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+
+    /* Ensure transition applies */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navi button:hover {
+    background-color: #f1c40f;
+    color: #4c0b0b;
+}
+
