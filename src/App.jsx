@@ -1,6 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import "./App.css";
-import Questions from "./Questions";
+
 import Question from "./Question";
 import Logins from "./Logins"; 
 import Register from "./Register";
@@ -26,7 +26,7 @@ const optionsList3=[
 
   
   return (
-    <BrowserRouter>
+    
       <Routes>
       <Route path="/" element={<FrontPage />} />
       <Route path="/home" element={<Home />} />
@@ -35,14 +35,30 @@ const optionsList3=[
         <Route path="/explore" element={<Explore />} />
         <Route path="/recipe/:index" element={<RecipeDetails />} />
         <Route path="/register" element={<Register />}/>
-        <Route path="/question1" element={<Question question={"Do you prefer Hot or Cold?"} options={sample} nextPath="/question2"/>} />
-        <Route path="/question2" element={<Questions question={"What kind of hot food do you prefer?"} optionsList={optionsList} nextPath="/question3"/>}/>
-        <Route path="/question3" element={<Questions question={"What kind of cold food do you prefer?"} optionsList={optionsList2} nextPath="/question4"/>}/>
-        <Route path="/question4" element={<Question question={"Do you have any dietary restrictions?"} options={sample2} nextPath="/question5"/>}/>
-        <Route path="/question5" element={<Questions question={"What are your dietary preferences?"} optionsList={optionsList3} />} />
+        <Route path="/question1"  element={
+                        <Question
+                            question="What is your favorite food?"
+                            optionsList={[
+                                ["Pizza", "Burger", "Pasta"],
+                                ["Sushi", "Salad", "Tacos"]
+                            ]}
+                            nextPath="/explore"
+                        />
+                    }/>
+                    <Route path="/question2"  element={
+                      <Question
+                          question="What is your favorite food?"
+                          optionsList={[[
+                              "Yes","No"]
+                          ]}
+                          nextPath="/explore"
+                      />
+                  }
+
+                />
 
       </Routes>
-    </BrowserRouter>
+  
   );
 }
 

@@ -1,14 +1,13 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa"; // Import the three-lines (hamburger) icon
-import "./Header.css";
+import { FaBars } from "react-icons/fa"; // Import hamburger icon
+import "./Header.css"; // Make sure this is correctly imported
 
 export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [dropdownOpen, setDropdownOpen] = useState(false); // State for dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  // Define dynamic classes based on the current route
   const getHeaderClass = () => {
     switch (location.pathname) {
       case "/register":
@@ -18,13 +17,11 @@ export default function Header() {
       case "/question1":
         return "header question1-header";
       case "/question2":
-        return "header explore-header";
       case "/question3":
-          return "header explore-header";
-      case "/question4":
-            return "header question1-header";
       case "/question5":
-          return "header explore-header";
+        return "header explore-header";
+      case "/question4":
+        return "header question1-header";
       case "/recipes":
         return "header recipes-header";
       case "/login":
@@ -33,8 +30,8 @@ export default function Header() {
       case "/recipe/1":
       case "/recipe/2":
         return "header recipe-header";
-        case "/explore":
-          return "header exp-header";
+      case "/explore":
+        return "header exp-header";
       default:
         return "header";
     }
@@ -45,6 +42,8 @@ export default function Header() {
       case "/question1":
         return "navi question1-nav";
       case "/question2":
+      case "/question3":
+      case "/question5":
         return "navi explore-nav";
       case "/recipes":
         return "navi recipes-nav";
@@ -60,12 +59,6 @@ export default function Header() {
         return "navi recipe-nav";
       case "/explore":
         return "navi exp-nav";
-        case "/question3":
-          return "navi explore-nav";
-          case "/question4":
-            return "navi question1-nav";
-            case "/question5":
-        return "navi explore-nav";
       default:
         return "navi";
     }
